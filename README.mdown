@@ -1,0 +1,30 @@
+Javascript frontend testing
+===========================
+
+from failure to good to great
+-----------------------------
+
+Repository for the talk by me (@sideshowcoder) at [munichjs](http://www.munichjs.org/) on 5/2/2013.
+The commits are placed at the important points of the development to replay.
+
+Important commands
+------------------
+
+Install gems (needs bundler which can be installed via $ gem install bundler)
+
+    $ bundle install
+
+Setup a jasmine project
+
+    $ bundle exec jasmine init
+
+run the jasmine test server on port 8888
+
+    $ rake jasmine
+
+serve the public folder
+
+    $ cd ./public && python -m SimpleHTTPServer
+
+
+
