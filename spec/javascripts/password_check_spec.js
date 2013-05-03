@@ -16,4 +16,11 @@ describe('PasswordCheck', function(){
     pw.val('12345678').change()
     expect(submit.attr('disabled')).toBeFalsy()
   })
+
+  it('disables the submit for passwords shorter than 4', function(){
+    pw.val('12345678').change()
+    pw.val('12').change()
+    expect(submit.attr('disabled')).toBeTruthy()
+  })
+
 })
