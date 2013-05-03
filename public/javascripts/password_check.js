@@ -26,3 +26,5 @@ $.fn.passwordCheck = function(){
     new PasswordCheck($(this))
   })
 }
+
+$(function(){ $('.password-field').passwordCheck() })
