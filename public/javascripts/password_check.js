@@ -1,8 +1,12 @@
 var PasswordCheck = function(field){
   this.submit = field.siblings(':submit')
   this.field = field
-  this.submit.attr('disabled', 'disabled')
+  this.init()
+}
+
+PasswordCheck.prototype.init = function(){
   this.field.change(this.handleNewValue.bind(this))
+  this.handleNewValue()
 }
 
 PasswordCheck.prototype.handleNewValue = function(){
