@@ -11,7 +11,7 @@ describe('PasswordCheck', function(){
     var submit = $(':submit')
     var pw = $('.password-field')
     $('.password-field').passwordCheck()
-    pw.val('12345678')
+    pw.val('12345678').change()
     expect(submit.attr('disabled')).toBeFalsy()
   })
 })
