@@ -8,6 +8,8 @@ var PasswordCheck = function(field){
 PasswordCheck.prototype.handleNewValue = function(){
   if(this.validate()){
     this.submit.removeAttr('disabled')
+  } else {
+    this.submit.attr('disabled', 'disabled')
   }
 }
 
