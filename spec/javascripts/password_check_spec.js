@@ -9,13 +9,13 @@ describe('PasswordCheck', function(){
   })
 
   it('enables the submit for passwords longer than 4', function(){
-    pw.val('12345678').change()
+    pw.val('12345678').keyup()
     expect(submit.attr('disabled')).toBeFalsy()
   })
 
   it('disables the submit for passwords shorter than 4', function(){
-    pw.val('12345678').change()
-    pw.val('12').change()
+    pw.val('12345678').keyup()
+    pw.val('12').keyup()
     expect(submit.attr('disabled')).toBeTruthy()
   })
 
