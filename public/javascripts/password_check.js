@@ -5,7 +5,7 @@ var PasswordCheck = function(field){
 }
 
 PasswordCheck.prototype.init = function(){
-  this.field.change(this.handleNewValue.bind(this))
+  this.field.keyup(this.handleNewValue.bind(this))
   this.handleNewValue()
 }
 
