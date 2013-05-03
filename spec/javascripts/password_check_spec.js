@@ -1,16 +1,18 @@
 describe('PasswordCheck', function(){
-  it('disables the submit for empty passwords', function(){
+  var submit, pw
+
+  beforeEach(function(){
     loadFixtures('form.html')
-    var submit = $(':submit')
+    submit = $(':submit')
+    pw = $('.password-field')
     $('.password-field').passwordCheck()
+  })
+
+  it('disables the submit for empty passwords', function(){
     expect(submit.attr('disabled')).toBeTruthy()
   })
 
   it('enables the submit for passwords longer than 4', function(){
-    loadFixtures('form.html')
-    var submit = $(':submit')
-    var pw = $('.password-field')
-    $('.password-field').passwordCheck()
     pw.val('12345678').change()
     expect(submit.attr('disabled')).toBeFalsy()
   })
